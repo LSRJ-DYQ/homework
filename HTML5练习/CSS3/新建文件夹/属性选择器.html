@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<style>
+
+a[title]{
+color: red;
+}
+
+input[type=text]{ /*属性为text值的变幻颜色*/
+	color: red;
+
+}
+
+div[class ^= font]{ /*class ^= font表示所有font开头变幻*/
+	color: pink;
+}
+
+div[class$=footer]{ /*class $= footer表示所有footer结尾变幻*/
+	color: skyblue;
+}
+
+div[class*=tao]{ /*class*=tao表示所有有tao位置变幻*/
+	color: orange;
+}
+</style>
+
+</head>
+<body>
+<a href="#" title="百度">百度</a>
+<a href="#" title="谷歌">谷歌</a>
+<a href="#" >火狐</a>
+<a href="#" >新浪</a>
+<a href="#" >搜狗</a>
+<a href="#" >360</a>
+
+<input type="text" value="文本框">
+<input type="text" value="文本框">
+<input type="submit" >
+<input type="submit" >
+<input type="submit" >
+
+<div class="font1">属性选择器</div>
+<div class="font2">属性选择器</div>
+<div class="font3">属性选择器</div>
+<div class="23font">属性选择器1</div>
+<div class="java-footer">属性选择器2</div>
+<div class="c-footer">属性选择器2</div>
+<div class="news-tao-f">属性选择器3</div>
+<div class="news">属性选择器3</div>
+<div class="tao-g">属性选择器3</div>
+<div class="news-tao">属性选择器3</div>
+
+</body>
+</html>

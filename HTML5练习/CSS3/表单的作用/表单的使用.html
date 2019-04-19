@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+</head>
+<body>
+      <form action="www.baidu.com" method="post" name="userMaessage"><!-- action url提交地址 method 提交方式 name 表单名称-->
+      <!-- <input /> input是单标签-->
+      用户名: <input type="text" value="邓佑琼" > <br /> <!-- 文本框 value默认初始用户名 -->
+      <label>密　码: <input type="password" maxlength="6"></label> <br /> <!-- 密码框 maxlength=""限制密码使用个数-->
+      性　别: <input type="radio" name="max" checked="checked"> 男 
+      <input type="radio" name="max"> 女 
+      <input type="radio" name="max"> 人妖 
+      <input type="radio" name="max2"> 未知<br /> <!-- 单选框 如果是同一组，我们用相同的name值来实现 -->
+      爱　好: <input type="checkbox" name="boyboy"> 足球 <input type="checkbox" name="boy" checked="checked"> 篮球 <input type="checkbox" name="boy"> 乒乓球 <br> <!-- 复选框，可以同时选择多个  checked="checked"默认选择项-->
+      
+      搜索：  <input type="button" value="搜索啥"/>  <!-- 普通按钮 --><br />
+	   <input type="submit" value="提交表单" /><!-- 提交按钮 -->
+	   <input type="reset" value="重置表单" /><!-- 重置按钮 --><br />
+
+	   <input type="image" src="im.jpg" /><!-- 图像按钮 --><br />
+	   上传头像: 
+	   <input type="file" /> <br> <!-- 文件按钮 -->
+
+      籍贯:
+     <select> 
+        <option>广东</option>
+        <option selected="selected">湖南</option>
+        <option>广西</option>
+        <option>上海</option>
+      </select>
+
+      <select> 
+        <option>长沙</option>
+        <option selected="selected">郴州</option>
+        <option>衡阳</option>
+        <option>岳阳</option>
+      </select>
+
+      <header> 语义：定义页面的头部 页眉</header>
+      <nav>语义：定义导航栏</nav>
+      <footer>语义:定义 页面底部 页脚</footer>
+      <article>语义：定义文章</article>
+      <section>语义：定义区域</section>
+      <aside>语义：定义其所处内容之外的内容 侧边</aside>
+      <input type="text" value="输入明星" list="star"> 
+      <datalist id="star">  <!-- datalist 里面用id来实现 input链接-->
+          <option>刘德华</option>
+           <option>刘若英</option>
+            <option>刘晓庆</option>
+             <option>郭富城</option>
+             <option>张学友</option>
+      </datalist>
+		</form>
+</body
+</html>

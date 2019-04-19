@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- 这个文件需要解决一个问题  鼠标经过后  会向右偏移 -->
+    
+    <style>
+    * {
+    	margin: 0;
+    	padding: 0;
+    }
+    ul {
+    	list-style: none;
+    }
+    body {
+    	background: url(wx.jpg) repeat-x; /*repeat-x延x轴横向平铺*/
+    }
+    .nav {
+    	height: 75px;
+    }
+    .nav li {
+    	float: left;
+    	margin: 0 12px;
+    	padding-top: 21px;
+    }
+    /*设置a的文本状态 所以文本状态始终相同 所以写在一起 背景分开写*/
+    .nav li a {
+    	display: block;
+    	color: #fff;
+    	font-size: 14px;
+    	line-height: 33px;
+    	text-decoration: none; /*去掉下划线*/
+  
+    }
+     .nav li a span {
+      display: block;  /*此处一定要转为块级元素*/
+      line-height: 33px;
+    }
+
+    /*首页显示 始终为凸起*/
+    .nav .syli .sya {  /*注意权重问题 所以给li取了个类名 类选择器权重0 0 1 0 此处和为0 0 3 0 */
+      /*display: block;*/
+      background: url(to.png) no-repeat;
+      padding-left: 15px;
+    }
+    .nav .syli .syspan {
+      /*display: block;*/
+      background: url(to.png) no-repeat right; /*默认左对齐 改为右对齐*/
+      padding-right: 15px;
+    }
+
+    /*鼠标经过后  其他按钮的状态*/
+    .nav li a:hover {
+      /*display: block;*/
+      background: url(ao.png) no-repeat;
+      padding-left: 15px;
+    }
+
+    .nav li a:hover span {
+      /*display: block*/
+      background: url(ao.png) no-repeat right; /*默认左对齐 改为右对齐*/
+      padding-right: 15px;
+    }
+    </style>
+	
+</head>
+<body>
+      <div class="nav">
+           <ul>
+               <!-- 首页按钮 -->
+           	   <li class="syli">
+           	       <a href="#" class="sya">
+           	           <span class="syspan">首页</span>
+           	       </a>
+           	   </li>
+
+               <!-- 其它按钮 -->
+           	   <li>
+           	       <a href="">
+           	           <span>帮助与反馈</span>
+           	       </a>
+           	   </li>
+           	   <li>
+           	       <a href="">
+           	           <span>公众平台</span>
+           	       </a>
+           	   </li>
+           	   <li>
+           	       <a href="">
+           	           <span>开放平台</span>
+           	       </a>
+           	   </li>
+           	   <li>
+           	       <a href="">
+           	           <span>微信支付</span>
+           	       </a>
+           	   </li>
+           	   <li>
+           	       <a href="">
+           	           <span>微信网页版</span>
+           	       </a>
+           	   </li>
+           	   <li>
+           	       <a href="">
+           	           <span>表情开放平台</span>
+           	       </a>
+           	   </li>
+           	   <li>
+           	       <a href="">
+           	           <span>微信广告</span>
+           	       </a>
+           	   </li>
+           </ul>
+      </div>
+</body>
+</html>

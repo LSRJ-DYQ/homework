@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- .one 类选择器 :hover 伪类选择器 ::after 伪元素选择器 -->
+	<style>
+	div::before {
+		content: "楚乔";
+		background-color: pink;
+		border: 1px solid red;
+		width: 100px;
+		height: 100px;
+		/*类选择器 伪类选择器 就是选区对象 
+		伪元素选择器 本质上是 插入一个元素 (标签 盒子) 而且是行类元素 类似于 span a  不能设置大小*/
+
+		display: block;  /*所以要设置大小 需要转块级*/
+	}
+	div::after {
+		content: "宇文玥的";
+		display: block;
+		width: 100px;
+		height: 50px;
+		border: 1px solid skyblue;  /*由此看出伪元素本质上就是一个盒子*/
+	}
+	</style>
+</head>
+<body>
+      <div>是</div>
+</body>
+</html>

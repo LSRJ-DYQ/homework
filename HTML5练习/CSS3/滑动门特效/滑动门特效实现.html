@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+    * {
+    	margin: 0;
+    	padding: 0;
+    }
+    a {
+    	margin: 100px;
+    	display: inline-block;
+    	height: 33px;
+        /*千万不能给宽度  因为要实现推拉门  宽度不能写死*/
+        background: url(ao.png) no-repeat;
+        padding-left: 15px; /*撑开盒子*/
+
+        /*text-align: center;*/
+        line-height: 33px;
+        text-decoration: none;  /*取消下滑线*/
+    }
+    a span {
+    	display: inline-block;
+    	height: 33px;
+    	background: url(ao.png) no-repeat right;  /*span 不能给宽度 利用padding挤开 我们要右边的圆角 因为默认背景位置为左对齐 所以要改为右对齐 right*/
+    	padding-right: 15px;
+    }
+    </style>
+	
+</head>
+<body>
+      <a href="#">
+            <span>首页</span>
+      </a>
+      <a href="#">
+            <span>微信导航</span>
+      </a>
+      <a href="#">
+            <span>哈咯。酷狗</span>
+      </a>
+</body>
+</html>

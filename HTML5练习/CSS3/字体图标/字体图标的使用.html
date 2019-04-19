@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<style>
+	@font-face {  /* 电脑中没有的字体，我们需要声明 */
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?7kkyc2');
+    src:  url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+    span {
+        font-family: "icomoon";/* 一定要保证和上面的 font-family 相同*/
+        font-size: 200px;
+        color: skyblue;
+    }
+    div::before {
+        font-family: "icomoon";
+        font-size: 200px;
+        content: "\ea27";  /*必须加反斜杠*/
+    }
+    div {
+        font-family: "icomoon";
+        font-size: 200px;
+        color: pink;
+    }
+	</style>
+</head>
+<body>
+      <span></span>
+      <span></span>
+      <div></div>
+</body>
+</html>

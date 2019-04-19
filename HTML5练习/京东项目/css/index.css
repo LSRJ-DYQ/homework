@@ -1,0 +1,314 @@
+/*中间分类模块开始*/
+.grid {
+	height: 480px;
+	
+}
+/*分类第一列*/
+.grid-col1 {
+	height: 100%;
+	width: 190px;
+	background-color: #6e6568;
+	color: #fff;
+	font-size: 16px; /*不是给字的 给/的*/
+
+	position: relative; /*子绝父相*/
+}
+/*广告图片左边*/
+.ad {
+	width: 250px;
+	height: 480px;
+	position: absolute; /*绝对定位*/
+	top: 0;
+	left: -250px;
+}
+/*广告图片右边*/
+.ad-r {
+	position: absolute;
+	top: 0;
+	left: 250px;
+	z-index: 999; /*因为层级关系 这个图片会被压在下面 
+	所以给他个 index 值  这个值大于0就行*/
+	height: 480px;
+	width: 0; /*开始宽度设置 为0 达到隐藏效果*/
+	background: url(../images/ad-r.jpg);
+	/*这个盒子做动画 让他做过渡效果*/
+	transition: all 1s;
+}
+.ad:hover .ad-r { /*鼠标经过ad 广告这个图片的时候 ad-r 盒子宽度由0变为 900px*/
+	/*height="480" width="900"*/
+	width: 900px;
+}
+.grid-col1 a {
+	color: #fff;
+	font-size: 14px; /*给链接文字的*/
+	margin: 0 3px;
+}
+.grid-col1 a:hover {
+	color: #f10215;
+}
+.grid-col1 ul {
+	margin: 10px 0;
+}
+.grid-col1 ul li {
+	padding-left: 12px;
+	/*margin-left: 12px; 要注意这里为什么不用margin  就是因为下面有鼠标经过的效果*/
+	height: 29px;
+	line-height: 26px;
+}
+.grid-col1 ul li:hover {
+	background-color: #9c9698;
+}
+/*分类第二列*/
+.grid-col2 {
+	height: 100%;
+	width: 700px;
+	margin-left: 10px;
+}
+
+/*banner部分*/
+
+/*banner底下两张小图片设置  一个左浮动 一个右浮动 底端对齐*/
+.grid-col2-b div {
+	float: left;
+	margin-top: 10px;
+}
+.grid-col2-b div:last-child {
+	float: right;
+	margin-top: 10px;
+}
+.grid-col2-t {
+	position: relative; /*子绝父相*/
+}
+/*箭头按钮部分*/
+.arrow-l,
+.arrow-r {
+	position: absolute; /*绝对定位*/
+	top: 50%;
+	transform: translateY(-50%); /* top: 50% Y -50%实现盒子垂直居中*/
+	width: 30px;
+	height: 60px;
+    background: rgba(0, 0, 0, .3); /*设置背景半透明*/
+
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, .6);/*设置字体半透明*/
+    font-family: arial; /*设置字体样式 > */
+    font-weight: normal;  /*让斜体不倾斜 正常字体*/
+}
+/*默认为靠左 arrow-l 不需要设置 */
+/*.arrow-l {
+	
+}*/
+
+.arrow-r {
+	right: 0;  /*右箭头贴着右边对齐*/
+}
+.circle {
+	width: 175px;
+	height: 20px;
+	background: rgba(255, 255, 255, .3);/*设置背景半透明*/
+	position: absolute; /*绝对定位*/
+	left: 50%;
+	transform: translateX(-50%); /*left 50% X -50% 实现盒子水平居中*/
+	bottom: 20px;
+
+	border-radius: 10px;
+	padding-left: 8px;
+    box-sizing: border-box;  /*w 183 去除 padding-left: 8px; 得 w 175*/
+}
+.circle li {
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 50%; /*设置成圆形*/
+	float: left;
+	margin: 4px;
+
+	cursor: pointer; /*鼠标经过li 小圆点 的时候变成小手*/
+}
+.circle .current {  /* 注意权重问题 */
+	background-color: #f10215;  /*设置其中一个小圆点为这个色*/
+}
+
+/*分类第三列*/
+.grid-col3 {
+	height: 100%;
+	width: 190px;
+}
+
+/*右边模块*/
+
+/*登录模块*/
+.login {
+	height: 115px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+/*登录上模块*/
+.login-t {
+	width: 95px;
+	height: 60px;
+	line-height: 20px;
+	font-size: 12px;
+    color: #666;
+    padding-left: 60px;  /*这里给padding 把文字挤过来*/
+
+    white-space: nowrap; /*强制一行内显示*/
+    overflow: hidden; /*溢出隐藏*/
+    text-overflow: ellipsis; /*超出的部分显示省略号 这三句话缺一不可*/
+    position: relative; /*子绝父相*/
+}
+.login-t a {
+	color: #666;
+}
+.login a:hover {
+	color: #f10215;
+}
+/*登录下模块*/
+.login-b a {
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+	line-height: 20px;
+	border: 2px solid #f10215;
+	margin-right: 3px;
+	text-align: center;
+	color: #f10215;
+}
+.login-b a:hover {
+	background-color: #f10215;
+	color: #fff;
+}
+/*头像设置*/
+.uesr-info {
+	width: 50px;
+	height: 50px;
+	position: absolute; /*绝对定位*/
+	left: 0;
+	top: 0; 
+	background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0;
+	/*获取精灵图上的圆框做头像背景*/
+}
+.uesr-info img {
+	width: 40px;
+	border-radius: 50%;
+	margin: 5px;
+}
+/*新闻模块*/
+.news {
+    height: 154px;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+}
+/*新闻模块上*/
+.news-t {
+	height: 19px;
+	border-bottom: 1px solid #ccc;
+	position: relative; /*子绝父相*/
+}
+.news-t a {
+    float: left;
+    height: 17px;
+    line-height: 17px; /*垂直居中*/
+}
+/*促销*/
+.cuxiao {
+    width: 38px;
+    border-right: 1px solid #ccc;
+}
+/*公告*/
+.gg {
+	padding-left: 15px;
+}
+/*更多*/
+.news-t .more { /*注意权重问题*/
+	float: right;
+}
+/*促销下面的小红线*/
+.news-t div {
+	height: 2px;
+	width: 28px;
+	background-color: #f10215;
+	position: absolute; /*绝对定位*/
+	bottom: -1px;
+	left: 0;
+}
+.news-b {
+	padding-top: 15px;
+}
+.news-b li {
+    height: 23px;
+    line-height: 23px;
+}
+/*服务扩展模块*/
+.expand {
+    height: 209px;
+    /*background-color: pink;*/
+    overflow: hidden;  /*expand 这个宽度继承了 父亲 190 宽度  溢出隐藏*/
+}
+.expand ul {
+	width: 195px; /*父亲是190 但是里面的li 宽度超过了190px 
+	摆放不开 4个li 所以让ul宽度变大*/
+}
+.expand li {
+	width: 47px;
+	height: 69px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left;
+}
+.expand li a {
+	display: block;
+	padding-top: 15px; /*注意此处要用 padding 不能用madding*/ 
+	text-align: center;
+}
+.expand li i {
+	display: block; /*因为 i 是行内元素*/
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background: url(../images/sprite_fs@1x.png) no-repeat;
+	width: 20px;
+	height: 23px;
+	background-position: -5px -88px;
+}
+.expand li:nth-child(2) i {
+	background-position: -2px -45px;
+} 
+.expand li:nth-child(3) i {
+	background-position: -47px -89px;
+} 
+.expand li:nth-child(4) i {
+	width: 24px;
+	background-position: -88px 0px;
+}
+.expand li:nth-child(5) i {
+	width: 28px;
+	background-position: -88px -45px;
+}  
+.expand li:nth-child(6) i {
+	background-position: -2px 0px;
+} 
+.expand li:nth-child(7) i {
+	width: 23px;
+	background-position: -44px -45px;
+}
+.expand li:nth-child(8) i {
+	background-position: -92px -88px;
+} 
+.expand li:nth-child(9) i {
+	background-position: -134px 0px;
+} 
+.expand li:nth-child(10) i {
+	background-position: -134px -44px;
+} 
+.expand li:nth-child(11) i {
+	width: 24px;
+	background-position: -132px -88px;
+} 
+.expand li:nth-child(12) i {
+	background-position: -47px 0px;
+}  

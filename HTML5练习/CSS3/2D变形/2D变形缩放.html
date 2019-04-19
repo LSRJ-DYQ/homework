@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <style>
+    div {
+    	width: 450px;
+    	height: 300px;
+    	background-color: pink;
+    	margin:100px auto; 
+    	transition: all 0.5s; 
+    }
+    div:hover {
+    	transform: scale(1.2, 1.5);
+    }
+    section {
+    	width: 450px;
+    	height: 300px;
+    	margin: 100px auto;
+    	overflow: hidden; /*溢出隐藏*/
+    	border: 1px solid red;
+    }
+    section img {
+    	transition: all 0.2s;  /*谁做动画 给谁加过渡*/
+    }
+    section:hover img { /*鼠标经过section的时候 里面的img 缩放*/
+    	transform: scale(1.2);
+
+    }
+    </style>
+</head>
+<body>
+      <div></div>
+      <section>
+            <img src="2.jpg" width="450" height="300" alt="">
+      </section>
+</body>
+</html>

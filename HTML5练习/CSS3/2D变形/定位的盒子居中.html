@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+		/*transform: translate(100px);  水平移动100像素*/
+		/*transform: translate(50%);  不是以父亲的%
+		50%宽度 而是以自己*/
+		/*以前我们让定位的盒子居中对齐*/
+		position: absolute;
+		left: 50%； /*以父级宽度为准*/
+		/*margin-left -100px; 这个方法需要计算 不合适*/
+		transform: translate(-50%, -50%);  按自己宽度的50%  不需要计算了
+
+	}
+	</style>
+
+</head>
+<body>
+<div></div>
+</body>
+</html>

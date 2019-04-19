@@ -1,0 +1,74 @@
+@charset "UTF-
+.sz {
+    border: 1px solid red; /* 设置边框 solid 实线 dashed 虚线 double 双线*/
+
+    box-sizing: border-box; /*因为设置了边框会撑大盒子  所以需要把padding 和 border 都算入width里面*/
+
+	border-radius: 50%; /* 切割边距 为圆 */
+
+	outline: none; /*取消轮廓边框*/
+
+	box-shadow: 5px 5px 5px rgba(0, 0 , 0, 0); /* 设置阴影  水平 垂直 模糊距离 颜色透明度 */
+
+	font-weight: 700;  /* 700 bold 让字体加粗 */
+
+	font-style: normal; /*让斜体不倾斜*/
+
+	list-style: none; /* 去除 ul li 的圆点 */
+
+	text-align: center; /*文字水平居中*/
+
+	text-indent: -999em;  /*移动字体消失*/
+
+	text-indent:2em each-line; /*文本首行缩进2个字*/
+
+	text-decoration: none; /* 取消a接链下划线 */
+    
+    vertical-align: middle; /* middle 中线对齐 常用设置文字与图片水平对齐*/
+
+    vertical-align: top; /*top 顶对齐 baseline 基线对齐 解决图片的底线与盒子基线对齐*/
+
+    overflow: hidden; /*溢出隐藏 触发BFC 去除浮动造成的影响 默认 visible  常用 hidden scroll  auto */
+
+    perspective: absolute;/*：static 默认  absolute 绝对定位 relative 相对定位 fixed 固定定位 */    
+
+    z-index: 999; /*z-index 用于确定元素在当前层叠上下文中的层叠级别，并确定该元素是否创建新的局部层叠上下文*/。
+    
+    /*切割精灵图 雪碧图*/
+    background-position: 0 0; /* x y 切割时x y 值都为负数*/
+}
+
+<!-- 搜索框 -->
+     <div class="from">
+          <input type="text" placeholder="扫描仪"> /* placeholder 占位符*/
+          <button><i></i></button>  <!-- 按钮的意思 双标签 等价于 <input type="button" value=""> -->
+     </div>
+
+ input,button {
+	border: 0;
+	outline: none; /*取消轮廓边框*/
+}
+
+/*字体图标声明*/
+ @font-face {  /* 电脑中没有的字体，我们需要声明 注意文件路径 ../跳到上一级*/
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?7kkyc2');
+    src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+ /* 引用字体图标 */
+.shortcut i {
+ 	font-family: 'icomoon'; /* 引用字体图标 */
+ 	font-style: normal; /*让斜体不倾斜*/
+}
+
+/* 引用 淘宝 的方法 */
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+    margin: 0;
+	padding: 0;
+}

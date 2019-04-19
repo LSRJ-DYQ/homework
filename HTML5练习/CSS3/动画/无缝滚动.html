@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+    * {
+    	margin: 0;
+    	padding: 0;
+    }
+    ul {
+    	list-style: none;
+    }
+    nav {
+    	width: 882px;
+    	height: 86px;
+    	border: 1px solid pink;
+    	margin: 100px auto;
+    	overflow: hidden;
+    }
+    nav li {
+    	float: left;
+    }
+    nav ul {
+    	width: 200%;
+    	animation: moveing 5s linear infinite; /*引用动画*/
+    	/*linear 匀速运动*/
+    }
+    /*定义动画*/
+    @keyframes moveing {
+    	from {
+    		transform: translateX(0);
+    	}
+    	to {
+            transform: translateX(-882PX);
+    	}
+    }
+    nav:hover ul{ /*鼠标经过nav里面的ul 暂停动画*/
+    	animation-play-state: paused; 
+    }
+    </style>
+</head>
+<body>
+ <nav>
+     <ul>
+     	<li><img src="nav1.jpg" alt=""></li>
+     	<li><img src="nav2.jpg" alt=""></li>
+     	<li><img src="nav3.jpg" alt=""></li>
+     	<li><img src="nav4.jpg" alt=""></li>
+     	<li><img src="nav5.jpg" alt=""></li>
+     	<li><img src="nav6.jpg" alt=""></li>
+     	<li><img src="nav7.jpg" alt=""></li>
+     	<li><img src="nav1.jpg" alt=""></li>
+     	<li><img src="nav2.jpg" alt=""></li>
+     	<li><img src="nav3.jpg" alt=""></li>
+     	<li><img src="nav4.jpg" alt=""></li>
+     	<li><img src="nav5.jpg" alt=""></li>
+     	<li><img src="nav6.jpg" alt=""></li>
+     	<li><img src="nav7.jpg" alt=""></li>
+     </ul>
+ </nav>
+
+</body>
+</html>

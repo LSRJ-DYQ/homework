@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+    * {
+    	margin: 0;  /*清除默认的内外边距*/
+    	padding: 0;
+    }
+    .sousuo {
+        width: 238px;
+    	height: 294px;
+    	border: 1px solid #D9E0EE;
+    	border-top: 3px solid #FF8400; /*根据就近原则 这句话必须放在border的下面*/
+    	margin: 100px
+    }
+    .sousuo h3 {
+    	height: 35px;
+    	/*background-color: pink;*/
+    	border-bottom: 1px solid #D9E0EE;
+    	font-size: 16px;
+    	font-weight: normal; /*让粗体不变粗*/
+
+    	padding-left: 12px; /*因为h3我们没给宽度 继承的是父亲的宽度 所以不会撑大盒子*/
+    	line-height: 35px /*这句话必须写在下面 此处有问题 待解决 让行高等于高可以实现文字垂直居中*/
+
+
+
+    }
+    </style>
+</head>
+<body>
+      <div class="sousuo">
+      <h3>搜索趣图</h3>
+      </div>
+</body>
+</html>
